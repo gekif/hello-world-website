@@ -31,15 +31,31 @@
 <p>You should understand the basics of web development</p>
 
 <script>
-    var firstHeading = document.querySelector('h1');
-    firstHeading.style.color = 'red';
+    var firstHeading = document.querySelector('h1'),
+        secondHeading = document.querySelector('h2'),
+        paragraph = document.querySelector('p');
 
-    var secondHeading = document.querySelector('h2');
-    secondHeading.style.color = 'red';
 
-    var paragraph = document.querySelector('p');
-    paragraph.style.color = 'red';
+    function applyDarkTheme() {
+        firstHeading.style.color = 'white';
+        secondHeading.style.color = 'white';
+        paragraph.style.color = 'white';
+
+        document.body.style.backgroundColor = 'darkgray';
+    }
+
+
+    function applyLightTheme() {
+        firstHeading.style.color = 'blue';
+        secondHeading.style.color = 'blue';
+        paragraph.style.color = 'blue';
+
+        document.body.style.backgroundColor = 'white';
+    }
 </script>
+
+<button onclick="applyDarkTheme()">Dark Theme</button>
+<button onclick="applyLightTheme()">Light Theme</button>
 
 </body>
 </html>
